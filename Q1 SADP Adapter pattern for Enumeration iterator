@@ -1,0 +1,43 @@
+Write a Java Program to implement Adapter pattern for Enumeration iterator
+
+import java.util.*; 
+ class EnumerationIterator implements Iterator 
+ { 
+     Enumeration enumeration; 
+     public EnumerationIterator(Enumeration enumeration) 
+     { 
+         this.enumeration = enumeration;
+    }
+    public boolean hasNext() 
+    { 
+         return enumeration.hasMoreElements(); 
+    }
+    public Object next()
+    {
+        return enumeration.nextElement(); 
+    }
+    public void remove() 
+    { 
+        throw new UnsupportedOperationException(); 
+    } 
+} 
+public class Slip5 
+{ 
+        public static void main (String args[]) 
+        { 
+            Vector v = new Vector(Arrays.asList(args)); 
+            Iterator iterator = new EnumerationIterator(v.elements()); 
+            while (iterator.hasNext()) 
+            {
+                System.out.println(iterator.next()); 
+            } 
+        } 
+}
+----------------------------------------------------------------------------------------------------
+output
+PS I:\My Drive\NRClasses\MCS\Sem 3\SADP\SADPSlipSolutions> java Slip5 this is java  
+
+this
+is
+java
+ 
