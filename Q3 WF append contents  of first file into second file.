@@ -1,2 +1,13 @@
 Using nodejs create a web page to read two file names from user and append contents of first file into second file. 
 
+const fs require('fs');
+
+// open destination file for appending
+
+var write fs.createwriteStream("message.txt", (flags: 'a'));
+
+// open source file for reading var readfs.createReadStream("input.txt");
+
+write.on('close', function() { console.log("done writing");
+});
+read.pipe(write);
