@@ -13,6 +13,9 @@ fs.appendFile('file.txt','first line added','utf-8',err=>{
         console.log('second line appended');
     });
 });
-
-
+------------------------------------------------------------------------------------
+1) create one text file --> File1.txt 
+2) create second text file --> File2.txt
+3) write program in vs code
+4) run it in terminal --> node appendfile.js
 
